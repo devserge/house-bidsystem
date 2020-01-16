@@ -6,7 +6,7 @@ include("header.php");
 
 <body>
 
-    <h1>Kleine test.</h1>
+    <h1>Grote test</h1>
 
 	<form>
 	  <div class="form-group">
