@@ -7,7 +7,7 @@ include("/includes/setup.inc.php");
 
 <body>
     <div class="container mt-5">
-        <form>
+        <form method="POST" >
             <div class="col md-5">
               <h1>Database gegevens:</h1>
               <div class="form-group">
@@ -33,7 +33,7 @@ include("/includes/setup.inc.php");
             
             <br>
             <div class="col md-5">
-            <form>
+            <form method="POST">
               <h1>Administratieve gegevens:</h1>
               <div class="form-group">
                 <label for="adres">Adres en huisnummer:</label>
