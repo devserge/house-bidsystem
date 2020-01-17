@@ -26,7 +26,7 @@ include("includes/setup.inc.php");
                 <label for="dbname">Database naam:</label>
                 <input type="text" name="dbname" class="form-control" placeholder="Vul database naam in.." required>
               </div>
-            <button type="submit" class="btn btn-warning" name="testconn">Test verbinding</button>  <button type="submit" class="btn btn-success" name="dbopslaan">Opslaan</button>
+            <button type="submit" class="btn btn-warning" name="dbconntest">Test verbinding</button>  <button type="submit" class="btn btn-success" name="dbopslaan">Opslaan</button>
 
             </div>
             </form>
