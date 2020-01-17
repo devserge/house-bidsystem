@@ -1,7 +1,7 @@
 <?php
 
 include("header.php");
-include("/includes/setup.inc.php");
+include("includes/setup.inc.php");
 
 ?>
 
