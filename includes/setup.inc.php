@@ -1,7 +1,11 @@
 <?php
 
 if(isset($_POST['dbconntest'])) {
-    echo "De opgegeven database-gegevens konden geen correcte verbinding opleveren. Zijn de instellingen juist?";
+    echo "
+    <div class='alert alert-danger' role='alert'>
+    Er kon geen verbinding worden gemaakt met de database. Zijn de gegevens juist?
+    </div>    
+    ";
 
 }
 
