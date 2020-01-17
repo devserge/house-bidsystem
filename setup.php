@@ -7,7 +7,7 @@ include("header.php");
 <body>
     <div class="container mt-5">
         <form>
-            <div class="">
+            <div class="col md-5">
               <h1>Database gegevens:</h1>
               <div class="form-group">
                 <label for="dbhost">Database host:</label>
@@ -27,7 +27,7 @@ include("header.php");
               </div>
             </div>
             
-            <div class="">
+            <div class="col md-5">
               <h1>Administratieve gegevens:</h1>
               <div class="form-group">
                 <label for="adres">Adres en huisnummer:</label>
