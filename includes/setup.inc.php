@@ -15,7 +15,6 @@ if(isset($_POST['dbconntest'])) {
             Er kon geen verbinding worden gemaakt met de database. Zijn de gegevens juist?
             </div>    
         ";
-        die();
     }else {
         echo "
             <div class='alert alert-success' role='alert'>
