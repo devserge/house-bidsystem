@@ -26,7 +26,7 @@ include("header.php");
                 <input type="text" name="dbname" class="form-control" placeholder="Vul database naam in..">
               </div>
             </div>
-            
+            <br>
             <div class="col md-5">
               <h1>Administratieve gegevens:</h1>
               <div class="form-group">
