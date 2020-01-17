@@ -9,7 +9,7 @@ if(isset($_POST['dbconntest'])) {
     $conn = new mysqli($host, $user, $pass, $name);
     
     
-    if ($conn->connect_error) {
+    if ($conn->false) {
          die ("
             <div class='alert alert-danger' role='alert'>
             Er kon geen verbinding worden gemaakt met de database. Foutcode: . $conn->connect_error 
