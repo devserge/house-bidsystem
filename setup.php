@@ -28,8 +28,10 @@ include("header.php");
             <button type="submit" class="btn btn-warning" name="testconn">Test verbinding</button>  <button type="submit" class="btn btn-success name="dbopslaan">Opslaan</button>
 
             </div>
+            </form>
             <br>
             <div class="col md-5">
+            <form>
               <h1>Administratieve gegevens:</h1>
               <div class="form-group">
                 <label for="adres">Adres en huisnummer:</label>
