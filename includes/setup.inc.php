@@ -1,12 +1,12 @@
 <?php
 
 if(isset($_POST['dbconntest'])) {
-    $dbhost = $_POST[dbhost];
-    $dbuser = $_POST[dbuser];
-    $dbpass = $_POST[dbpass];
-    $dbname = $_POST[dbname];
+    $host = $_POST[dbhost];
+    $user = $_POST[dbuser];
+    $pass = $_POST[dbpass];
+    $name = $_POST[dbname];
     
-    $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
+    $conn = new mysqli($host, $user, $pass, $name);
     
     
     if ($conn->connect_error) {
