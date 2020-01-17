@@ -20,7 +20,7 @@ include("includes/setup.inc.php");
               </div>
                 <div class="form-group">
                 <label for="dbpassword">Database wachtwoord:</label>
-                <input type="password" name="dbpassword" class="form-control" placeholder="Vul het database wachtwoord in.." required>
+                <input type="password" name="dbpass" class="form-control" placeholder="Vul het database wachtwoord in.." required>
               </div>
                 <div class="form-group">
                 <label for="dbname">Database naam:</label>
