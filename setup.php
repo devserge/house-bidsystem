@@ -42,8 +42,8 @@ include("header.php");
                 <label for="huisnaam">Naam van het huis:</label>
                 <input type="text" name="huisnaam" class="form-control" placeholder="Vul hier de naam van het huis in.." required>
               </div>
+              <button type="submit" class="btn btn-success name="opslaan">Opslaan</button>
             </div>
-            <button type="submit" class="btn btn-success name="opslaan">Opslaan</button>
           </form>
                     
             
