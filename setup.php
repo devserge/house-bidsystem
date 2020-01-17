@@ -35,7 +35,7 @@ include("header.php");
               </div>
               <div class="form-group">
                 <label for="email">E-mailadres:</label>
-                <input type="text" name="email" class="form-control" placeholder="Vul uw e-mailadres in.." required>
+                <input type="email" name="email" class="form-control" placeholder="Vul uw e-mailadres in.." required>
               </div>
                 <div class="form-group">
                 <label for="huisnaam">Naam van het huis:</label>
