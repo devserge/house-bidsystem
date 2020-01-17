@@ -10,10 +10,10 @@ if(isset($_POST['dbconntest'])) {
     
     
     if ($conn->connect_error) {
-         die "
+         die ("
             <div class='alert alert-danger' role='alert'>
             Er kon geen verbinding worden gemaakt met de database. Foutcode: . $conn->connect_error 
-            </div>" ;
+            </div>");
     }else {
         echo "
             <div class='alert alert-success' role='alert'>
@@ -24,3 +24,4 @@ if(isset($_POST['dbconntest'])) {
 }
 
 ?>
+
