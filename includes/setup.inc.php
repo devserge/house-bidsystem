@@ -2,7 +2,7 @@
 
 if(isset($_POST['dbconntest'])) {
     $dbhost = $_POST[dbhost];
-    $dbuser = $_POST[dbname];
+    $dbuser = $_POST[dbuser];
     $dbpass = $_POST[dbpass];
     $dbname = $_POST[dbname];
     
