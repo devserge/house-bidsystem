@@ -9,11 +9,11 @@ if(isset($_POST['dbconntest'])) {
     $conn = new mysqli($host, $user, $pass, $name);
     
     
-    if ($conn->false) {
+    if ($conn->connect_error) {
          die ("
             <div class='alert alert-danger' role='alert'>
-            Er kon geen verbinding worden gemaakt met de database. Foutcode: . $conn->connect_error 
-            </div>");
+            Er kon geen verbinding worden gemaakt met de database. Foutcode: . $conn->connect_error");
+            echo "</div>";
     }else {
         echo "
             <div class='alert alert-success' role='alert'>
