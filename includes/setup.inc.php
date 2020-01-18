@@ -1,12 +1,12 @@
 <?php
 
-$host = $_POST['dbhost'];
-$user = $_POST['dbuser'];
-$pass = $_POST['dbpass'];
-$name = $_POST['dbname'];
-
 // Database connectie testen zodra op de knop gedrukt wordt
-if(isset($_POST['dbconntest'])) { //
+if(isset($_POST['dbconntest'])) { 
+
+    $host = $_POST['dbhost'];
+    $user = $_POST['dbuser'];
+    $pass = $_POST['dbpass'];
+    $name = $_POST['dbname'];
     
     // database connectie leggen
     $conn = new mysqli($host, $user, $pass, $name);
