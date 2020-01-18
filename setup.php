@@ -52,3 +52,9 @@ include("includes/setup.inc.php");
           </form>
         </div>
 </body>
+
+<?php
+
+include("footer.php");
+
+?>
