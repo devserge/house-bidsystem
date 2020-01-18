@@ -28,11 +28,17 @@ if(isset($_POST['dbconntest'])) {
 }
 
 if(isset($_POST['dbopslaan'])) {
+    
+    $host = $_POST['dbhost'];
+    $user = $_POST['dbuser'];
+    $pass = $_POST['dbpass'];
+    $name = $_POST['dbname'];
+    
     echo "
     De volgende database gegevens zijn opgeslagen:
-    Host: $host
-    Gebruiker: $user
-    Wachtwoord: $pass
+    Host: $host <br>
+    Gebruiker: $user <br>
+    Wachtwoord: $pass <br>
     Database: $name
     ";
     
