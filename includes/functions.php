@@ -1,5 +1,6 @@
 <?php
 
+// De database connectie testen
 function testConnection() {
 
     $host = $_POST['dbhost'];
@@ -26,13 +27,16 @@ function testConnection() {
     }
 };
 
+// de database connectie opslaan
 function saveConnection() {
 
+    // Variabelen definieren
     $host = $_POST['dbhost'];
     $user = $_POST['dbuser'];
     $pass = $_POST['dbpass'];
     $name = $_POST['dbname'];
     
+    // De gegevens doorpushen naar de dbconnection.php file
     $dbConnection = fopen("includes/dbconnection.php", "w") or die("Kon het bestand niet ophalen! Bestaat deze wel?");
 
     $php = "<?php \n \n";
@@ -57,11 +61,14 @@ function saveConnection() {
 
     include("dbh.inc.php");
 
+    // De gegevens tables aanmaken
     $gegevens = "CREATE TABLE gegevens(
         adres VARCHAR(100) NOT NULL,
         huisnaam VARCHAR(30) NOT NULL,
         email VARCHAR(70) NOT NULL UNIQUE
     )";
+    
+     // De biedingen table aanmaken
      $biedingen = "CREATE TABLE biedingen(
         bod INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
         biedingen VARCHAR(100) NOT NULL,
@@ -69,6 +76,7 @@ function saveConnection() {
         laagstebod VARCHAR(70) NOT NULL
     )";
 
+    // De succes-message weergeven
     if(mysqli_query($link, $gegevens)){
 
         echo "
@@ -93,17 +101,22 @@ function saveConnection() {
         header( "refresh:2;url=setup2.php" );
 };
 
+// De data van setup2.php opslaan
 function saveData() {
 
+// de dbh connectie in deze function pakken
 include("dbh.inc.php");
 
+// variabelen definieren
 $adres = $_POST['adres'];
 $mail = $_POST['email'];
 $huisnaam = $_POST['huisnaam'];
 
+// de ingevulde data in de database voeren
 $datainzet = "INSERT INTO gegevens (adres, huisnaam, email)
 VALUES ('$adres', '$huisnaam', '$mail')";
 
+// succes message geven als t gelukt is
 if ($link->query($datainzet) === TRUE) {
         echo "
             <div class='alert alert-success' role='alert'>
@@ -116,12 +129,15 @@ if ($link->query($datainzet) === TRUE) {
 
 $link->close();
 
+// De setup.php file voor veiligheid verwijderen
 $setup = "setup.php";  
 unlink($setup);
 
+// De setup2.php file voor veilgheid verwijderen
 $setupw = "setup2.php";  
 unlink($setupw);
         
+// automatisch doorlinken naar de index.php
 header( "refresh:2;url=index.php" );
 };
 
