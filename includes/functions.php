@@ -1,6 +1,5 @@
 <?php
 
-// De database connectie testen
 function testConnection() {
 
     $host = $_POST['dbhost'];
@@ -27,21 +26,14 @@ function testConnection() {
     }
 };
 
-// de database connectie opslaan
 function saveConnection() {
 
-    // Variabelen definieren
     $host = $_POST['dbhost'];
     $user = $_POST['dbuser'];
     $pass = $_POST['dbpass'];
     $name = $_POST['dbname'];
     
-<<<<<<< HEAD
     $dbConnection = fopen("../includes/dbconnection.php", "w") or die("Kon het bestand niet ophalen! Bestaat deze wel?");
-=======
-    // De gegevens doorpushen naar de dbconnection.php file
-    $dbConnection = fopen("includes/dbconnection.php", "w") or die("Kon het bestand niet ophalen! Bestaat deze wel?");
->>>>>>> 38725b49cb4f6aab09a4c72acd742d580a10c00e
 
     $php = "<?php \n \n";
     fwrite($dbConnection, $php);
@@ -65,7 +57,6 @@ function saveConnection() {
 
     include("dbh.inc.php");
 
-    // De gegevens tables aanmaken
     $gegevens = "CREATE TABLE gegevens(
         adres VARCHAR(80) NOT NULL,
         postcode VARCHAR(7) NOT NULL,
@@ -75,8 +66,6 @@ function saveConnection() {
         email VARCHAR(70) NOT NULL UNIQUE,
         telefoonnummer VARCHAR(15) NOT NULL
     )";
-    
-     // De biedingen table aanmaken
      $biedingen = "CREATE TABLE biedingen(
         bodid INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
         naam VARCHAR (100) NOT NULL,
@@ -86,7 +75,6 @@ function saveConnection() {
         akkoord VARCHAR(50) NOT NULL
     )";
 
-<<<<<<< HEAD
      $informatie = "CREATE TABLE informatie(
         kleinetoelichting VARCHAR(20000) NOT NULL,
         overhethuis VARCHAR(100000) NOT NULL,
@@ -96,9 +84,6 @@ function saveConnection() {
     )";
 
 
-=======
-    // De succes-message weergeven
->>>>>>> 38725b49cb4f6aab09a4c72acd742d580a10c00e
     if(mysqli_query($link, $gegevens)){
 
         echo "
@@ -134,10 +119,8 @@ function saveConnection() {
         header( "refresh:2;url=setup2.php" );
 };
 
-// De data van setup2.php opslaan
 function saveData() {
 
-<<<<<<< HEAD
     include("dbh.inc.php");
 
 	$datastmt = $link->prepare("INSERT INTO gegevens (adres, postcode, woonplaats, provincie, huisnaam, email, telefoonnummer)
@@ -171,34 +154,9 @@ function saveData() {
 	echo "<div class='alert alert-success' role='alert'>
 			De gegevens zijn verwerkt. U wordt doorgestuurd naar de website.
 	       </div>";
-=======
-// de dbh connectie in deze function pakken
-include("dbh.inc.php");
-
-// variabelen definieren
-$adres = $_POST['adres'];
-$mail = $_POST['email'];
-$huisnaam = $_POST['huisnaam'];
-
-// de ingevulde data in de database voeren
-$datainzet = "INSERT INTO gegevens (adres, huisnaam, email)
-VALUES ('$adres', '$huisnaam', '$mail')";
-
-// succes message geven als t gelukt is
-if ($link->query($datainzet) === TRUE) {
-        echo "
-            <div class='alert alert-success' role='alert'>
-            De gegevens zijn verwerkt. U wordt doorgestuurd naar de website.
-            </div>    
-        ";
-} else {
-    echo "Error: " . $datainzet . "<br>" . $link->error;
-}
->>>>>>> 38725b49cb4f6aab09a4c72acd742d580a10c00e
 
     $link->close();
 
-<<<<<<< HEAD
     $sourcesetup = 'setup.php';
     $bestemmingpad = '../.secure/';
     rename($sourcesetup, $bestemmingpad . pathinfo($sourcesetup, PATHINFO_BASENAME));
@@ -209,18 +167,6 @@ if ($link->query($datainzet) === TRUE) {
 
     header( "refresh:2;url=../index.php" );
 
-=======
-// De setup.php file voor veiligheid verwijderen
-$setup = "setup.php";  
-unlink($setup);
-
-// De setup2.php file voor veilgheid verwijderen
-$setupw = "setup2.php";  
-unlink($setupw);
-        
-// automatisch doorlinken naar de index.php
-header( "refresh:2;url=index.php" );
->>>>>>> 38725b49cb4f6aab09a4c72acd742d580a10c00e
 };
 
 function stuurMailBodEigenaar() {
