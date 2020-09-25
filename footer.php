@@ -11,8 +11,8 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-5 col-xs-12 about-company">
-      <h2><?php echo($adresDT['huisnaam']) ?></h2>
-      <p class="pr-5 text-white-50"><?php echo($infoDT['kleinetoelichting']) ?></p>
+      <h2><?= $adresDT['huisnaam'] ?></h2>
+      <p class="pr-5 text-white-50"><?= $infoDT['kleinetoelichting'] ?></p>
     </div>
     <div class="col-lg-3 col-xs-12 links">
       <h4 class="mt-lg-0 mt-sm-3">Handige links</h4>
@@ -25,12 +25,12 @@
     </div>
     <div class="col-lg-4 col-xs-12 location">
       <h4 class="mt-lg-0 mt-sm-4">Adres</h4>
-      <p><?php echo($adresDT['adres']) ?><br>
-        <?php echo($adresDT['postcode']) ?>, <?php echo($adresDT['woonplaats']) ?><br>
-        <?php echo($adresDT['provincie']) ?>
+      <p><?= $adresDT['adres'] ?><br>
+        <?= $adresDT['postcode'] ?>, <?= $adresDT['woonplaats'] ?><br>
+        <?= $adresDT['provincie'] ?>
       </p>
-      <p class="mb-0"><i class="fa fa-phone mr-3"></i></i><?php echo($adresDT['telefoonnummer']) ?></p>
-      <p><i class="fa fa-envelope-o mr-3"></i><?php echo($adresDT['email']) ?></p>
+      <p class="mb-0"><i class="fa fa-phone mr-3"></i></i><?= $adresDT['telefoonnummer'] ?></p>
+      <p><i class="fa fa-envelope-o mr-3"></i><?= $adresDT['email'] ?></p>
     </div>
   </div>
   <div class="row mt-5">
