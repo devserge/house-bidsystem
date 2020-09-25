@@ -35,7 +35,7 @@ include("header.php");
 	  <h1>Over het huis </h1>
 	  <div class="row">
 	    <div class="col">
-	    <p> <?php echo($infoDT['overhethuis']) ?> </p>
+	    <p> <?= $infoDT['overhethuis'] ?> </p>
 	    </div>
 	  </div>
 	</div>
@@ -47,7 +47,7 @@ include("header.php");
     	<div class="text-center">
 	  		<i class="fas fa-home fa-2x"></i><br>
 	  		<b>Oppervlakte:</b>
-	  		<p class="text-center"> <?php echo($infoDT['oppervlakte']);  ?> m&sup2;</p>
+	  		<p class="text-center"> <?= $infoDT['oppervlakte']  ?> m&sup2;</p>
 	  	</div> 
     </div>
 
@@ -55,7 +55,7 @@ include("header.php");
     	<div class="text-center">
 	  		<i class="fas fa-gavel fa-2x"></i><br>
 	  		<b>Bouwjaar:</b>
-	  		<p> <?php echo($infoDT['bouwjaar']);  ?> </p>
+	  		<p> <?= $infoDT['bouwjaar']  ?> </p>
 	  	</div> 
     </div>
 
@@ -63,7 +63,7 @@ include("header.php");
     	<div class="text-center">
 	  		<i class="fas fa-euro-sign fa-2x"></i><br>
 	  		<b>Vraagprijs:</b>
-	  		<p> &euro; <?php echo($biedprijs);  ?> </p>
+	  		<p> &euro; <?= $biedprijs  ?> </p>
 	  	</div> 
     </div>
 </div>
